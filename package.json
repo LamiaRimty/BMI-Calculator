@@ -1,0 +1,24 @@
+{
+  "name": "bmi-calculator",
+  "version": "1.0.0",
+  "description": "This a bmi calculator.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LamiaRimty/BMI-Calculator.git"
+  },
+  "author": "Lamia Jabin Rimty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LamiaRimty/BMI-Calculator/issues"
+  },
+  "homepage": "https://github.com/LamiaRimty/BMI-Calculator#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2"
+  }
+}
