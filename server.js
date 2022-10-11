@@ -1,20 +1,22 @@
 //jshint esversion:6
 const express =require("express");
-//const bodyParser=require("body-parser");
+const bodyParser=require("body-parser");
 
 const app = express();
-//app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({ extended: true}));
 
 app.get("/",function(req,res){
-    //res.sendFile(__dirname,"/bmiCalculator.html");
-    res.send("hello");
+    res.sendFile( __dirname + "/bmiCalculator.html");
+    
 });
 
 app.post("/",function(req,res){
-    // var height=Number(req.body.height);
-    // var weight=Number(req.body.weight);
-    // var result=height/weight;
-    // console.log(result);
+    var h = Number(req.body.height);
+    var w = Number(req.body.weight);
+    var bmi = h/w;
+    console.log(bmi);
+
+    console.log(res.body);
        res.send("Thanks for posting");
      
    });
