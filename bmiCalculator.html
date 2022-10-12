@@ -5,15 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🧮 BMI Calculator</title>
+     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
 <h1>BMI Calculator 🧮 </h1> 
-<form action="index.html" method="post">
- <input type="text" name="height" placeholder="Enter your height">
- <input type="text" name="weight" placeholder="Enter your weight">
-<button type="submit" name="submit">Calculate BMI</button>
 
-</form>
+
+    <form action="/" method="post">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="height" >Height: <input type="text" name="height" placeholder="Enter your height"> </label>
+           
+        
+            <label for="weight">Weight: <input type="text" name="weight" placeholder="Enter your weight"> </label>    
+           
+            </div>
+
+            <div class="col-md-6">
+                <button type="submit" >Calculate BMI</button>
+            </div>
+            
+        </div>
+        
+    </div>
+       </form>
+
+
     
+<style>
+    body{
+    background-color:rgb(200, 236, 240) ;
+    text-align: center;
+    align-content: center;
+}
+h1{
+padding: 3%;
+color: brown;
+font-size: 5rem;
+}
+
+.container{
+  
+    margin: 2% 25%;
+    padding: 0;
+    width: 50%;
+    background-color: beige ;
+    align-content: center;
+}
+
+form{
+    display: flex;
+    /* width: 50%;
+    height: 50%;
+    background-color: blueviolet;
+    align-content: center; */
+}
+
+.col-md-6{
+margin: 2%;
+padding: 2%;
+}
+
+</style>
 </body>
 </html>

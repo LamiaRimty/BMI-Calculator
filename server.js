@@ -5,19 +5,24 @@ const bodyParser=require("body-parser");
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true}));
 
+
 app.get("/",function(req,res){
     res.sendFile( __dirname + "/bmiCalculator.html");
     
 });
 
-app.post("/",function(req,res){
-    var h = Number(req.body.height);
-    var w = Number(req.body.weight);
-    var bmi = h/w;
-    console.log(bmi);
+app.get("/styles",function(req,res){
+    res.sendFile( __dirname + "/styles.css");
+    
+});
 
-    console.log(res.body);
-       res.send("Thanks for posting");
+
+app.post("/",function(req,res){
+    var h = parseFloat(req.body.height);
+    var w = parseFloat(req.body.weight);
+    var bmi =Math.round(w/(h*h));
+    
+    res.send("You BMI is "+ bmi);
      
    });
    
